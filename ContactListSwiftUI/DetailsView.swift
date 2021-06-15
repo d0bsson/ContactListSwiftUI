@@ -12,9 +12,20 @@ struct DetailsView: View {
     
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            List {
+                Text("\(person.fullName)")
+                    .font(.largeTitle)
+                    .bold()
+                Image(systemName: "person")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    
+            }
+            Spacer()
+
         }
     }
+    
 }
 
 struct DetailsView_Previews: PreviewProvider {
