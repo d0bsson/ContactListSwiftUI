@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Person {
+struct Person: Hashable {
     let name: String
     let surname: String
     let email: String
@@ -38,17 +38,15 @@ extension Person {
                 email: emails[index],
                 phone: phones[index]
             )
-            
             persons.append(person)
         }
-        
         return persons
     }
-}
-
-enum Contacts: String {
-    case phone = "phone"
-    case email = "tray"
+    
+    static func getContact(idx: Int) -> Person {
+        let person = Person(name: "Example", surname: "Person", email: "", phone: "")
+        return person
+    }
 }
     
 
