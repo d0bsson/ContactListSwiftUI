@@ -13,7 +13,9 @@ struct ContactList: View {
     
     var body: some View {
         List(persons, id: \.name) { person in
-            Text("\(person.fullName)")
+            NavigationLink( destination: DetailsView(person: person)) {
+                Text("\(person.fullName)")
+            }
         }
     }
 }

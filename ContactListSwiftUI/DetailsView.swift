@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct DetailsView: View {
+    
     let person: Person
     
     var body: some View {
-        VStack {
-            List {
-                Text("\(person.fullName)")
-                    .font(.largeTitle)
-                    .bold()
-                Image(systemName: "person")
-                    .resizable()
-                    .frame(width: 150, height: 150)
-                    
+        List {
+            Image(systemName: "person")
+                .resizable()
+                .frame(width: 150, height: 150)
+            HStack {
+                Image(systemName: "mail")
+                Text("\(person.email)")
             }
-            Spacer()
-
+            HStack {
+                Image(systemName: "person")
+                Text("\(person.phone)")
+            }
         }
+        .navigationBarTitle("\(person.fullName)")
     }
-    
 }
 
 struct DetailsView_Previews: PreviewProvider {

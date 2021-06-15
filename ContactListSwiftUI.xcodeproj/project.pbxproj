@@ -66,7 +66,7 @@
 				D779BC252678B57000C5F3A3 /* ContactListSwiftUIApp.swift */,
 				D779BC272678B57000C5F3A3 /* ContentView.swift */,
 				D779BC45267932A800C5F3A3 /* Numbers.swift */,
-				D779BC392678B9BE00C5F3A3 /* DataManager.swift */,
+				D779BC5326794E1A00C5F3A3 /* Manager */,
 				D779BC292678B57100C5F3A3 /* Assets.xcassets */,
 				D779BC2E2678B57100C5F3A3 /* Info.plist */,
 				D779BC2B2678B57100C5F3A3 /* Preview Content */,
@@ -90,6 +90,14 @@
 				D779BC352678B6A800C5F3A3 /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D779BC5326794E1A00C5F3A3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D779BC392678B9BE00C5F3A3 /* DataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
