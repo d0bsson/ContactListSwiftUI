@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct Numbers: View {
+    let persons: [Person]
+    
     var body: some View {
-        Text("Hello, World!")
+        List {
+            ForEach(persons, id: \.name) { person in
+                Section(header: Text(person.fullName)) {
+                    Text("\(person.phone)")
+                    Text("\(person.email)")
+                }
+            }
+        }
     }
 }
 
+
+
+
 struct Numbers_Previews: PreviewProvider {
     static var previews: some View {
-        Numbers()
+        Numbers(persons: Person.getContactList())
     }
 }

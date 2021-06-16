@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    let contacts = Person.getContactList()
+    let persons = Person.getContactList()
     
     var body: some View {
         NavigationView {
             TabView {
-                ContactList(persons: contacts)
+                ContactList(persons: persons)
                     .tabItem {
-                        Image(systemName: "person")
+                        Image(systemName: "book")
                         Text("Contacts")
                     }
-                Numbers()
+                Numbers(persons: persons)
                     .tabItem {
                         Image(systemName: "phone")
                         Text("Numbers")
                     }
             }
-            .navigationBarTitle("Contacts")
+            .navigationBarTitle("Contact List")
         }
     }
 }
